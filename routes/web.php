@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/**
+ * Dashboard Route
+ **/
+Route::get('/','DashBoardController@index')->name('home');
