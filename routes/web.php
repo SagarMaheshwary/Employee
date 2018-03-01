@@ -12,6 +12,13 @@
 */
 
 /**
- * Dashboard Route
- **/
+ * Dashboard Route(s)
+ * 
+ */
 Route::get('/','DashBoardController@index')->name('home');
+
+/**
+ *  Departments Route(s)
+ * 
+ */
+Route::resource('/departments','DepartmentsController');

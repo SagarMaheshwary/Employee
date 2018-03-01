@@ -2,7 +2,7 @@
     <li>
         <div class="user-view">
             <div class="background">
-                <img src="{{asset('images/material_background.png')}}" width="100%">
+                <img src="{{asset('images/material_background.jpg')}}" width="100%">
             </div>
             <a href="#!"><img class="circle" src="{{asset('images/no_image.png')}}"></a>
             <a href="#!"><span class="white-text name">John Doe</span></a>
@@ -22,7 +22,7 @@
                 <div class="collapsible-body">
                     <ul>
                         <li>
-                            <a href="#" class="waves-effect waves-grey">Department</a>
+                            <a href="/departments" class="waves-effect waves-grey">Department</a>
                         </li>
                         <li>
                             <a href="#" class="waves-effect waves-grey">Salary</a>
@@ -48,6 +48,6 @@
         </ul>
     </li>
     <li>
-        <a href="#" class="waves-effect waves-teal"><i class="material-icons">account_circle</i>User Management</a>
+        <a href="#" class="waves-effect waves-grey"><i class="material-icons">account_circle</i>User Management</a>
     </li>
 </ul>

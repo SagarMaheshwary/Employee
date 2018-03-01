@@ -1,6 +1,9 @@
 .gradient-bg{
-    background:linear-gradient(to left,#0097A7 30%,#00ACC1,#00BCD4) !important;
+    /*background:linear-gradient(to left,#0097A7 30%,#00ACC1,#00BCD4) !important;*/
+    background:linear-gradient(to left,#00838F,#0097A7,#00BCD4);
 }
+
+/* this is for sideNav that shows on large screens */
 header, main, footer {
     padding-left: 300px;
 }
@@ -12,15 +15,21 @@ header, main, footer {
 .mt-15{
     margin-top:15px;
 }
+
+.card-mt-15{
+    margin-top:15vh;
+}
+
 body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-  }
+}
 
-  main {
+main {
     flex: 1 0 auto;
-  }
+}
+
 @media only screen and (max-width : 992px) {
     header, main, footer {
         padding-left: 0;

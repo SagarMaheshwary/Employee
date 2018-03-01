@@ -16,7 +16,6 @@
      -->
     <!-- Include Navbar with this layout -->
     @include('inc.navbar')
-    
     <main>
         @yield('content')
     </main>
@@ -24,6 +23,7 @@
     @include('inc.footer')
     <script src="{{asset('js/materialize.js')}}"></script>
     <script src="{{asset('js/app.js')}}"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <!-- Include the Script after materialize.js is loaded -->
+    @include('inc.message')
 </body>
 </html>

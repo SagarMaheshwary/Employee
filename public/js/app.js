@@ -1,4 +1,11 @@
+//Initialize sideNav
 var sideNav = document.querySelector('.sidenav');
-var instance = M.Sidenav.init(sideNav);
+M.Sidenav.init(sideNav);
+
+//Initialize Collapsible
 var collapsible = document.querySelector('.collapsible');
-var instance = M.Collapsible.init(collapsible);
+M.Collapsible.init(collapsible);
+
+//Initialize Modal
+var modal = document.querySelector('.modal');
+M.Modal.init(modal);

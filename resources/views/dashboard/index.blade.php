@@ -1,4 +1,3 @@
 @extends('layouts.app')
-@section('inc.navbar')
-
+@section('content')
 @endsection
