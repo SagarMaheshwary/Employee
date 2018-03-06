@@ -30,6 +30,9 @@ main {
     flex: 1 0 auto;
 }
 
+.no-margin{
+    margin:0 !important;
+}
 @media only screen and (max-width : 992px) {
     header, main, footer {
         padding-left: 0;

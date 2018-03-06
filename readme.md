@@ -1,66 +1,81 @@
 ## Employee Management System
-This Project is using Materialize-css version 1.0.0 alpha-4 , material icons , font-awesome version 5.0 for icons like github and linkedin. It backend is build in laravel which is an awesome php framework and it's gonna generate views from blade template engine (just plain old html and css).
+This Project is using Materialize-css version 1.0.0 alpha-4 , material icons. It's backend is built on laravel which is an awesome php framework and it's gonna generate views from blade template engine (just plain old html and css).
 
 It's under Development.
 
-## Files that have been created in public folder
+### Files that have been created in public folder
 
 - None.
 
-## Changes that have been made in public folder
-
-- Change Background Image for sideNav.
-
-## Views that have been created
-
-- index.blade.php , create.blade.php , and edit.blade.php have been created in views/department folder .
-- message.blade.php in views/inc has been created to show message toasts
-
-## Views that have been modified
-
-- sideNav for adding department route.
-- removed links from footer in views/inc.
-- app.blade.php for including message.blade.php in views/layouts
-
-## Controllers that have been created
-
-- DepartmentsController (Added full CRUD functionality).
-
-## Controllers that have been modified
-
-- None.
-
-## Models that have been created
-
-- Department.
-
-## Models that have been modified
+### Changes that have been made in public folder
 
 - None
 
-## Migrations that have been created
+### Views that have been created
 
-- create_departments_table
+- sys_mg Folder has been created and all the system management views are stored in it.
+- Divisions ,States ,Countries ,Cities ,Salaries Views has been Created in inside sys_mg folder.
 
-## Migrations that have been modified
+### Views that have been modified
+
+- sideNav for adding System Management routes.
+- some css classes have been applied that are not much important.
+- custom pagination view was created and its located in vendor/pagination. read more about it in [Laravel documentation](https://laravel.com/docs/5.6/pagination#manually-creating-a-paginator).
+
+### Controllers that have been created
+
+- DivisionsController (Added full CRUD functionality).
+- CitiesController (Added full CRUD functionality).
+- StatesController (Added full CRUD functionality).
+- CountriesController (Added full CRUD functionality).
+- SalariesController (Added full CRUD functionality).
+
+### Controllers that have been modified
+
+- DepartmentsController for changing the view path (now it's in sys_mg/departments).
+
+### Models that have been created
+
+- Division
+- City
+- State
+- Country
+- Salary
+
+### Models that have been modified
 
 - None
 
-## Routes that have been created
+### Migrations that have been created
 
-- Departments Route
+- create_divisions_table
+- create_cities_table
+- create_states_table
+- create_countries_table
+- create_salaries_table
 
-## Routes that have been created
+### Migrations that have been modified
 
 - None
 
-## Removed Default
+### Routes that have been created
 
-- Default database migrations and auth controllers have been deleted.
-- Everything from resources/assets folder that was irrelevant for this project.
+- Divisions Route(s)
+- Cities Route(s)
+- States Route(s)
+- Countries Route(s)
+- Salaries Route(s)
 
-## Note
+### Routes that have been created
 
-I have commented all the code so anybody can modify it as needed. I'm gonna write description of my work as a developers guide hope somebody finds it useful.
+- None
 
+### Comments
+
+* DepartmentsController has been commented.
+* sys_mg/departments views have been commented.
+* routes/web has been commented.
+
+### Note
+vendor/pagination/default.blade.php can be used for other laravel projects, if you are using materialize-css because laravel pagination comes with bootstrap support, not the other ones.
 above headings that says changes have been made means changes to files that were created in previous commit.

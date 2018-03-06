@@ -12,6 +12,12 @@
 */
 
 /**
+ *  you can see the list of all the routes with all details by typing,
+ *  php artisan route:list on the commandline changing directory to 
+ *  this project directory
+ */
+
+/**
  * Dashboard Route(s)
  * 
  */
@@ -22,3 +28,28 @@ Route::get('/','DashBoardController@index')->name('home');
  * 
  */
 Route::resource('/departments','DepartmentsController');
+
+/**
+ *  Countries Route(s)
+ */
+Route::resource('/countries','CountriesController');
+
+/**
+ *  Cities Route(s)
+ */
+Route::resource('/cities','CitiesController');
+
+/**
+ *  Salaries Route(s)
+ */
+Route::resource('/salaries','SalariesController');
+
+/**
+ *  Divisions Route(s)
+ */
+Route::resource('/divisions','DivisionsController');
+
+/**
+ *  States Route(s)
+ */
+Route::resource('/states','StatesController');

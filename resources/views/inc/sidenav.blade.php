@@ -1,8 +1,7 @@
 <ul id="slide-out" class="sidenav sidenav-fixed grey lighten-4">
     <li>
         <div class="user-view">
-            <div class="background">
-                <img src="{{asset('images/material_background.jpg')}}" width="100%">
+            <div class="background gradient-bg">
             </div>
             <a href="#!"><img class="circle" src="{{asset('images/no_image.png')}}"></a>
             <a href="#!"><span class="white-text name">John Doe</span></a>
@@ -25,19 +24,19 @@
                             <a href="/departments" class="waves-effect waves-grey">Department</a>
                         </li>
                         <li>
-                            <a href="#" class="waves-effect waves-grey">Salary</a>
+                            <a href="/salaries" class="waves-effect waves-grey">Salary</a>
                         </li>
                         <li>
-                            <a href="#" class="waves-effect waves-grey">Country</a>
+                            <a href="/divisions" class="waves-effect waves-grey">Division</a>
                         </li>
                         <li>
-                            <a href="#" class="waves-effect waves-grey">City</a>
+                            <a href="/cities" class="waves-effect waves-grey">City</a>
                         </li>
                         <li>
-                            <a href="#" class="waves-effect waves-grey">State</a>
+                            <a href="/states" class="waves-effect waves-grey">State</a>
                         </li>
                         <li>
-                            <a href="#" class="waves-effect waves-grey">Country</a>
+                            <a href="/countries" class="waves-effect waves-grey">Country</a>
                         </li>
                         <li>
                             <a href="#" class="waves-effect waves-grey">Report</a>
