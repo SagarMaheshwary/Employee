@@ -8,11 +8,13 @@
                     <div class="row">
                         <form action="{{route('cities.store')}}" method="POST">
                             <div class="input-field no-margin">
+                                <i class="material-icons prefix">location_city</i>
                                 <input type="text" name="city_name" id="city_name" class="validate" value="{{Request::old('city_name') ? : ''}}">
                                 <label for="city_name">City Name</label>
                                 <span class="{{$errors->has('city_name') ? 'helper-text red-text' : '' }}">{{$errors->first('city_name')}}</span>
                             </div>
                             <div class="input-field">
+                                <i class="material-icons prefix">vpn_lock</i>
                                 <input type="number" name="zip_code" id="zip_code" class="validate" value="{{Request::old('zip_code') ? : ''}}">
                                 <label for="zip_code">Zip Code</label>
                                 <span class="{{$errors->has('zip_code') ? 'helper-text red-text' : '' }}">{{$errors->first('zip_code')}}</span>

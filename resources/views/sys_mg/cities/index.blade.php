@@ -36,7 +36,7 @@
                                                     <a href="{{route('cities.edit',$city->id)}}" class="btn btn-floating btn-small waves=effect waves-light orange"><i class="material-icons">mode_edit</i></a>
                                                 </div>
                                                 <div class="col">
-                                                    <form action="{{route('cities.destroy',$city->id)}}" method="POST">
+                                                    <form onsubmit="return confirm('Do you really want to delete?');" action="{{route('cities.destroy',$city->id)}}" method="POST">
                                                         @method('DELETE')
                                                         @csrf()
                                                         <button type="submit" class="btn btn-floating btn-small waves=effect waves-light red"><i class="material-icons">delete</i></button>

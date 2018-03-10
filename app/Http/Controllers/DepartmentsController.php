@@ -26,7 +26,7 @@ class DepartmentsController extends Controller
          *  all rows from departments table.
          */
         
-         $departments = Department::orderBy('dept_name','asc')->Paginate(4);
+        $departments = Department::orderBy('dept_name','asc')->Paginate(4);
         
         /**
          *  we can also do orderBy('dept_name,'desc') which means it'll return
@@ -77,7 +77,7 @@ class DepartmentsController extends Controller
          *  should be same)
          */
         
-         $this->validate($request,[
+        $this->validate($request,[
             'dept_name' => 'required|min:4|unique:departments'
         ]);
 
@@ -87,7 +87,7 @@ class DepartmentsController extends Controller
          *  and save (store it to the database).
          */
         
-         $department = new Department();
+        $department = new Department();
         $department->dept_name = $request->input('dept_name');
         $department->save();
         
@@ -148,7 +148,7 @@ class DepartmentsController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'dept_name' => 'required|unique:departments|min:4'
+            'dept_name' => 'required|unique:departments,dept_name,'.$id.'|min:4'
         ]);
         
         /**
@@ -157,7 +157,7 @@ class DepartmentsController extends Controller
          *  so first we'll find it by it's id then, save it. 
          */
         
-         $department = Department::Find($id);
+        $department = Department::Find($id);
         $department->dept_name = $request->input('dept_name');
         $department->save();
 

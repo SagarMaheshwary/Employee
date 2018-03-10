@@ -12,11 +12,38 @@ header, main, footer {
     padding-left:15px !important;
 }
 
+.p5{
+    padding:5px;
+}
+
 .mt-15{
     margin-top:15px;
 }
 
+.mt-20{
+    margin-top:20px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.emp-img{
+    height:35px;
+    width:35px;
+}
+
+.emp-img-big{
+    height: 180px;
+    width:100%;
+}
+
+.card-title{
+    font-weight: normal !important;
+}
+
 .card-mt-15{
+    /* vh is viewport.*/
     margin-top:15vh;
 }
 
@@ -33,6 +60,7 @@ main {
 .no-margin{
     margin:0 !important;
 }
+
 @media only screen and (max-width : 992px) {
     header, main, footer {
         padding-left: 0;

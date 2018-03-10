@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Employee Management System</title>
 </head>
-<body>
+<body class="grey lighten-4">
     <!-- 
         This is the default layout that's going to be used in all views
         except for login because i want a login without a navbar
@@ -21,6 +21,7 @@
     </main>
     <!-- Include Footer -->
     @include('inc.footer')
+    <script src="{{asset('js/jquery.js')}}"></script>
     <script src="{{asset('js/materialize.js')}}"></script>
     <script src="{{asset('js/app.js')}}"></script>
     <!-- Include the Script after materialize.js is loaded -->

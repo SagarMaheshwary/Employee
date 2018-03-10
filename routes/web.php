@@ -13,8 +13,8 @@
 
 /**
  *  you can see the list of all the routes with all details by typing,
- *  php artisan route:list on the commandline changing directory to 
- *  this project directory
+ *  php artisan route:list on the commandline. also change your directory to 
+ *  this project directory when doing so.
  */
 
 /**
@@ -53,3 +53,8 @@ Route::resource('/divisions','DivisionsController');
  *  States Route(s)
  */
 Route::resource('/states','StatesController');
+
+/**
+ *  States Route(s)
+ */
+Route::resource('/employees','EmployeesController');

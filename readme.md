@@ -9,38 +9,31 @@ It's under Development.
 
 ### Changes that have been made in public folder
 
-- None
+- Added some styles in app.css
+- link storage folder to public folder
 
 ### Views that have been created
 
-- sys_mg Folder has been created and all the system management views are stored in it.
-- Divisions ,States ,Countries ,Cities ,Salaries Views has been Created in inside sys_mg folder.
+- index,create,show,edit views have been created in emp_mg/employee.
 
 ### Views that have been modified
 
-- sideNav for adding System Management routes.
+- sideNav for adding Employee routes.
 - some css classes have been applied that are not much important.
-- custom pagination view was created and its located in vendor/pagination. read more about it in [Laravel documentation](https://laravel.com/docs/5.6/pagination#manually-creating-a-paginator).
 
 ### Controllers that have been created
 
-- DivisionsController (Added full CRUD functionality).
-- CitiesController (Added full CRUD functionality).
-- StatesController (Added full CRUD functionality).
-- CountriesController (Added full CRUD functionality).
-- SalariesController (Added full CRUD functionality).
+- EmployeesController (Added full CRUD functionality).
 
 ### Controllers that have been modified
 
-- DepartmentsController for changing the view path (now it's in sys_mg/departments).
+- CitiesController for changing zip_code validation in update method.
+- DepartmentsController changing comments (nothing special).
 
 ### Models that have been created
 
-- Division
-- City
-- State
-- Country
-- Salary
+- Gender
+- Employee (Added relationships)
 
 ### Models that have been modified
 
@@ -48,11 +41,8 @@ It's under Development.
 
 ### Migrations that have been created
 
-- create_divisions_table
-- create_cities_table
-- create_states_table
-- create_countries_table
-- create_salaries_table
+- create_genders_table
+- create_employees_table
 
 ### Migrations that have been modified
 
@@ -60,22 +50,21 @@ It's under Development.
 
 ### Routes that have been created
 
-- Divisions Route(s)
-- Cities Route(s)
-- States Route(s)
-- Countries Route(s)
-- Salaries Route(s)
+- Employee route(s)
 
-### Routes that have been created
+### Routes that have been modified
 
 - None
 
-### Comments
+### Files that have been Commented
 
-* DepartmentsController has been commented.
-* sys_mg/departments views have been commented.
-* routes/web has been commented.
+- EmployeesController.
+- Employee views.
+- Employee model
 
 ### Note
-vendor/pagination/default.blade.php can be used for other laravel projects, if you are using materialize-css because laravel pagination comes with bootstrap support, not the other ones.
-above headings that says changes have been made means changes to files that were created in previous commit.
+
+- GendersTableSeeder has been created to generate gender data because we don't need to modify gender values.
+- old() method is global so we don't need to do Request::old().
+
+- above headings that says changes have been made means changes to files that were created in previous commit.

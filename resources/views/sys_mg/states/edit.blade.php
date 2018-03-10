@@ -7,14 +7,15 @@
                 <div class="card-content">
                     <div class="row">
                         <form action="{{route('states.update',$state->id)}}" method="POST">
-                            <div class="input-field">
+                            <div class="input-field no-margin">
+                                <i class="material-icons prefix">grid_on</i>
                                 <input type="text" name="state_name" id="state_name" value="{{Request::old('state_name') ? : $state->state_name}}">
                                 <label for="state_name">State Name</label>
                                 <span class="{{$errors->has('state_name') ? 'helper-text red-text' : ''}}">{{$errors->first('state_name')}}</span>
                             </div>
                             @method('PUT')
                             @csrf()
-                            <button type="submit" class="btn waves-effect waves-light col s6 offset-s3 m4 offset-m4 l4 offset-l4 xl4-offset-xl4">Update</button>
+                            <button type="submit" class="btn waves-effect waves-light mt-15 col s6 offset-s3 m4 offset-m4 l4 offset-l4 xl4-offset-xl4">Update</button>
                         </form>
                     </div>
                     <div class="card-action">

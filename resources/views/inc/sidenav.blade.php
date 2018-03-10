@@ -12,7 +12,7 @@
         <a class="waves-effect waves-grey" href="#!"><i class="material-icons">dashboard</i>Dashboard</a>
     </li>
     <li>
-        <a class="waves-effect waves-grey" href="#!"><i class="material-icons">supervisor_account</i>Employee Management</a>
+        <a class="waves-effect waves-grey" href="/employees"><i class="material-icons">supervisor_account</i>Employee Management</a>
     </li>
     <li class="no-padding">
         <ul class="collapsible collapsible-accordion">

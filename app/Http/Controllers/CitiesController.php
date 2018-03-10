@@ -86,7 +86,7 @@ class CitiesController extends Controller
     {
         $this->validate($request,[
             'city_name' => 'required|min:2',
-            'zip_code' => 'required|min:4|unique:cities'
+            'zip_code' => 'required|min:4|unique:cities,zip_code,'.$id
         ]);
         $city = City::find($id);
         $city->city_name = $request->input('city_name');
