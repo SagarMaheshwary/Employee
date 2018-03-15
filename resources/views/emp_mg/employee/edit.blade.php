@@ -151,7 +151,7 @@
                     </form>
                 </div>
                 <div class="card-action">
-                    <a href="#">Go Back</a>
+                    <a href="/employees">Go Back</a>
                 </div>
             </div>
         </div>

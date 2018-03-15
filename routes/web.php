@@ -38,6 +38,7 @@ Route::resource('/countries','CountriesController');
  *  Cities Route(s)
  */
 Route::resource('/cities','CitiesController');
+Route::get('/cities/search/{str}','CitiesController@search');
 
 /**
  *  Salaries Route(s)
@@ -58,3 +59,8 @@ Route::resource('/states','StatesController');
  *  States Route(s)
  */
 Route::resource('/employees','EmployeesController');
+
+/**
+ *  Admins Route(s)
+ */
+Route::resource('/admins','AdminsController');

@@ -9,31 +9,28 @@ It's under Development.
 
 ### Changes that have been made in public folder
 
-- Added some styles in app.css
-- link storage folder to public folder
+- None
 
 ### Views that have been created
 
-- index,create,show,edit views have been created in emp_mg/employee.
+- index,create,edit views have been created in admin.
 
 ### Views that have been modified
 
-- sideNav for adding Employee routes.
-- some css classes have been applied that are not much important.
+- sideNav for adding admin routes.
+- Employee create and edit views for adding the missing routes which i had forgotten in previous commit. 
 
 ### Controllers that have been created
 
-- EmployeesController (Added full CRUD functionality).
+- AdminsController
 
 ### Controllers that have been modified
 
-- CitiesController for changing zip_code validation in update method.
-- DepartmentsController changing comments (nothing special).
+- None
 
 ### Models that have been created
 
-- Gender
-- Employee (Added relationships)
+- Admin
 
 ### Models that have been modified
 
@@ -41,8 +38,7 @@ It's under Development.
 
 ### Migrations that have been created
 
-- create_genders_table
-- create_employees_table
+- create_admins_table
 
 ### Migrations that have been modified
 
@@ -50,7 +46,7 @@ It's under Development.
 
 ### Routes that have been created
 
-- Employee route(s)
+- Admin route(s)
 
 ### Routes that have been modified
 
@@ -58,13 +54,9 @@ It's under Development.
 
 ### Files that have been Commented
 
-- EmployeesController.
-- Employee views.
-- Employee model
+- admin works the same as employee (just CRUD functionallity).
 
 ### Note
 
-- GendersTableSeeder has been created to generate gender data because we don't need to modify gender values.
-- old() method is global so we don't need to do Request::old().
-
+- AdminsTableSeeder has been created. this will just create a default admin user when running db:seed command.
 - above headings that says changes have been made means changes to files that were created in previous commit.

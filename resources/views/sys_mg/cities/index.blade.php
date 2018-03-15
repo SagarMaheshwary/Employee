@@ -20,7 +20,7 @@
                                 <th>Options</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="item-table">
                             <!-- Check if there are any cities to render in view -->
                             @if($cities->count())
                                 @foreach($cities as $city)

@@ -47,6 +47,6 @@
         </ul>
     </li>
     <li>
-        <a href="#" class="waves-effect waves-grey"><i class="material-icons">account_circle</i>User Management</a>
+        <a href="/admins" class="waves-effect waves-grey"><i class="material-icons">account_circle</i>Admin Management</a>
     </li>
 </ul>
