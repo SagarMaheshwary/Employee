@@ -21,7 +21,7 @@
  * Dashboard Route(s)
  * 
  */
-Route::get('/','DashBoardController@index')->name('home');
+Route::get('/dashboard','DashBoardController@index')->name('dashboard');
 
 /**
  *  Departments Route(s)
@@ -64,3 +64,19 @@ Route::resource('/employees','EmployeesController');
  *  Admins Route(s)
  */
 Route::resource('/admins','AdminsController');
+
+/**
+ *  Auth Route(s)
+ */
+
+//show the login view
+Route::get('/','AuthController@index')->name('login');
+
+//Authenticate a user
+Route::post('/','AuthController@authenticate')->name('auth.authenticate');
+
+//logout the user
+Route::get('/logout','AuthController@logout')->name('auth.logout')->middleware('auth');
+
+//show user details
+Route::get('/admin','AuthController@show')->name('auth.show')->middleware('auth');

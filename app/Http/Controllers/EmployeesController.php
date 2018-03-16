@@ -15,6 +15,12 @@ use App\Gender;
 
 class EmployeesController extends Controller
 {
+    /**
+     *  Only authenticated users can access this controller
+     */
+    public function __construct(){
+        $this->middleware('auth');
+    }
 
     /**
      * Display a listing of the resource.

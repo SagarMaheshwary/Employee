@@ -9,36 +9,36 @@ It's under Development.
 
 ### Changes that have been made in public folder
 
-- None
+- some css
 
 ### Views that have been created
 
-- index,create,edit views have been created in admin.
+- auth in layouts
+- index , show views in auth
 
 ### Views that have been modified
 
-- sideNav for adding admin routes.
-- Employee create and edit views for adding the missing routes which i had forgotten in previous commit. 
+- sideNav for adding auth routes and dropdown.
 
 ### Controllers that have been created
 
-- AdminsController
+- AuthController
 
 ### Controllers that have been modified
 
-- None
+- All controllers have been modified for adding auth middleware
 
 ### Models that have been created
 
-- Admin
+- None
 
 ### Models that have been modified
 
-- None
+- Admin for authentication
 
 ### Migrations that have been created
 
-- create_admins_table
+- None
 
 ### Migrations that have been modified
 
@@ -46,17 +46,17 @@ It's under Development.
 
 ### Routes that have been created
 
-- Admin route(s)
+- Auth route(s)
 
 ### Routes that have been modified
 
-- None
+- dashboard
+- login is now root
 
 ### Files that have been Commented
 
-- admin works the same as employee (just CRUD functionallity).
+- Auth and Admin controllers
 
 ### Note
 
-- AdminsTableSeeder has been created. this will just create a default admin user when running db:seed command.
 - above headings that says changes have been made means changes to files that were created in previous commit.

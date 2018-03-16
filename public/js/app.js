@@ -14,6 +14,7 @@ M.Modal.init(modal);
 $(document).ready(function(){
     $('select').formSelect();
     $('.datepicker').datepicker();
+    $(".dropdown-trigger").dropdown();
   });
 M.textareaAutoResize($('#address'));
 

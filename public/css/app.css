@@ -8,6 +8,10 @@ header, main, footer {
     padding-left: 300px;
 }
 
+.pl-0{
+    padding-left:0;
+}
+
 .pl-15{
     padding-left:15px !important;
 }
@@ -61,6 +65,27 @@ main {
     margin:0 !important;
 }
 
+/* styles for login form */
+.card-login{
+    margin-top:15%;
+}
+.card-title-login h5{
+    margin:0 !important;
+    padding-bottom:8px !important;
+    padding-top:8px !important;
+}
+
+.main-login{
+    width: 100%;
+    min-height: 90vh;
+    background:linear-gradient(180deg,#00838F,#00BCD4);
+    background-size: cover;
+}
+/* login end */
+
+.background{
+    background:linear-gradient(180deg,#00838F,#00BCD4);
+}
 @media only screen and (max-width : 992px) {
     header, main, footer {
         padding-left: 0;

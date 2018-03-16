@@ -5,9 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Admin;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Auth;
 
 class AdminsController extends Controller
 {
+    /**
+     *  Only authenticated users can access this controller
+     */
+    public function __construct(){
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -94,12 +102,26 @@ class AdminsController extends Controller
      */
     public function destroy($id)
     {
+        /**
+         *  Check if the admin is not the
+         *  current authenticated user
+         */
+        if($id == Auth::user()->id){
+            //redirect to admins route
+            return redirect('/admins')->with('info','Authenticated Admin cannot be deleted!');
+        }
+        
         $admin = Admin::find($id);
+
+        //delete the admin picture
         Storage::delete('public/admins/'.$admin->picture);
         $admin->delete();
         return redirect('/admins')->with('info','selected admin has been deleted!');
     }
 
+    /**
+     *  Validate all the inputs
+     */
     private function validateRequest(Request $request, $id)
     {
         $this->validate($request,[
@@ -112,6 +134,9 @@ class AdminsController extends Controller
         ]);
     }
 
+    /**
+     * Add or update an admin
+     */
     private function setAdmin(Request $request , Admin $admin , $fileNameToStore){
         $admin->first_name = $request->input('first_name');
         $admin->last_name = $request->input('last_name');
@@ -124,6 +149,9 @@ class AdminsController extends Controller
         $admin->save();
     }
 
+    /**
+     *  Handle Image Upload
+     */
     public function handleImageUpload(Request $request){
         if( $request->hasFile('picture') ){
             

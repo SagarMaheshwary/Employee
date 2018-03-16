@@ -12,6 +12,7 @@ class AdminsTableSeeder extends Seeder
      */
     public function run()
     {
+        // create a new admin when seeding
         $admin = new Admin();
         $admin->first_name = 'John';
         $admin->last_name = 'Doe';

@@ -1,11 +1,14 @@
 <ul id="slide-out" class="sidenav sidenav-fixed grey lighten-4">
     <li>
         <div class="user-view">
-            <div class="background gradient-bg">
+            <div class="background">
             </div>
-            <a href="#!"><img class="circle" src="{{asset('images/no_image.png')}}"></a>
-            <a href="#!"><span class="white-text name">John Doe</span></a>
-            <a href="#!"><span class="white-text email">jdandturk@gmail.com</span></a>
+            {{-- Get picture of authenicated user --}}
+            <a href="#!"><img class="circle" src="{{asset('storage/admins/'.Auth::user()->picture)}}"></a>
+            {{-- Get first and last name of authenicated user --}}
+            <a href="#!"><span class="white-text name">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</span></a>
+            {{-- Get email of authenicated user --}}
+            <a href="#!"><span class="white-text email">{{ Auth::user()->email }}</span></a>
         </div>
     </li>
     <li>
