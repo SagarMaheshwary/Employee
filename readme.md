@@ -5,7 +5,7 @@ It's under Development.
 
 ### Files that have been created in public folder
 
-- None.
+- added chart.js library for creating charts.
 
 ### Changes that have been made in public folder
 
@@ -13,44 +13,43 @@ It's under Development.
 
 ### Views that have been created
 
-- reset password in auth.
+- None.
 
 ### Views that have been modified
 
-- sideNav for adding icons.
-- navbar for changing dropdown for showing username instead of full name.
+- Dashboard.
 
 ### Controllers that have been created
 
-- None
+- None.
 
 ### Controllers that have been modified
 
-- AuthController for reset Password
+- DashboardController.
 
 ### Models that have been created
 
-- None
+- None.
 
 ### Models that have been modified
 
-- None
+- None.
 
 ### Migrations that have been created
 
-- None
+- None.
 
 ### Migrations that have been modified
 
-- None
+- None.
 
 ### Routes that have been created
 
-- reset password
+- None.
 
 ### Routes that have been modified
 
-- None
+- None.
 
 ### Note
 

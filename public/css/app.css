@@ -12,24 +12,52 @@ header, main, footer {
     padding-left:0;
 }
 
+.txt-md{
+    font-size: 1em;
+}
+
+.txt-sm{
+    font-size: .85em;
+}
+.mt{
+    margin-top:65px !important;
+}
+
 .pl-15{
     padding-left:15px !important;
+}
+
+.pt-5{
+    padding-top:5px;
 }
 
 .p5{
     padding:5px;
 }
 
+.d-none{
+    display: none;
+}
 .mt-15{
-    margin-top:15px;
+    margin-top:15px !important;
 }
 
 .mt-20{
-    margin-top:20px;
+    margin-top:20px !important;
+}
+
+.mx-20{
+    margin-left:20px;
+    margin-right:20px;
 }
 
 .bold{
     font-weight: bold;
+}
+
+.no-padding{
+    padding:0;
+    margin:0;
 }
 
 .emp-img{
@@ -75,6 +103,11 @@ main {
     padding-top:8px !important;
 }
 
+.container-fluid{
+    margin:0 auto;
+    width:90%;
+}
+
 .main-login{
     width: 100%;
     min-height: 90vh;
@@ -89,5 +122,20 @@ main {
 @media only screen and (max-width : 992px) {
     header, main, footer {
         padding-left: 0;
+    }
+    .mx-med-20{
+        margin-left:10%;
+        margin-right:10%;
+    }
+}
+@media only screen and (max-width : 600px) {
+    .card-login{
+        margin-top: 25%;
+    }
+}
+
+@media only screen and (min-width : 1200px) {
+    .ml-14{
+        margin-left:14% !important;
     }
 }
