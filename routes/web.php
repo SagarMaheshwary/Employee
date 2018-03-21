@@ -80,3 +80,9 @@ Route::get('/logout','AuthController@logout')->name('auth.logout')->middleware('
 
 //show user details
 Route::get('/admin','AuthController@show')->name('auth.show')->middleware('auth');
+
+//Show Password Reset Form
+Route::get('/password/reset', 'AuthController@showpasswordresetform')->name('auth.reset');
+
+//Reset Password
+Route::post('/password/reset', 'AuthController@reset');

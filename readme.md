@@ -9,24 +9,24 @@ It's under Development.
 
 ### Changes that have been made in public folder
 
-- some css
+- some css.
 
 ### Views that have been created
 
-- auth in layouts
-- index , show views in auth
+- reset password in auth.
 
 ### Views that have been modified
 
-- sideNav for adding auth routes and dropdown.
+- sideNav for adding icons.
+- navbar for changing dropdown for showing username instead of full name.
 
 ### Controllers that have been created
 
-- AuthController
+- None
 
 ### Controllers that have been modified
 
-- All controllers have been modified for adding auth middleware
+- AuthController for reset Password
 
 ### Models that have been created
 
@@ -34,7 +34,7 @@ It's under Development.
 
 ### Models that have been modified
 
-- Admin for authentication
+- None
 
 ### Migrations that have been created
 
@@ -46,17 +46,13 @@ It's under Development.
 
 ### Routes that have been created
 
-- Auth route(s)
+- reset password
 
 ### Routes that have been modified
 
-- dashboard
-- login is now root
-
-### Files that have been Commented
-
-- Auth and Admin controllers
+- None
 
 ### Note
 
+- check out the code for comments.
 - above headings that says changes have been made means changes to files that were created in previous commit.

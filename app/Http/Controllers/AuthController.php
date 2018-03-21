@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Admin;
 
 class AuthController extends Controller
 {
@@ -26,9 +27,14 @@ class AuthController extends Controller
             'password' => 'required|min:7',
         ]);
 
+        //try to login the user
         if (Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password')], $request->has('remember'))) {
             // Authentication passed...
             return redirect()->route('dashboard');
+        }else{
+            // Authentication failed...
+            //redirect the user with the old input
+            return redirect('/')->withInput()->with('info','Invalid Credentials!');
         }
     }
 
@@ -45,5 +51,43 @@ class AuthController extends Controller
      */
     public function show(){
         return view('auth.show');
+    }
+
+    /**
+     *  Show Form for resetting password
+     * 
+     * @return Response
+     */
+    public function showpasswordresetform(){
+        return view('auth.password_reset');
+    }
+
+    /**
+     *  Reset the Password
+     * 
+     * @return Response
+     */
+    public function reset(Request $request){
+        $this->validate($request,[
+            'email' => 'required|email|min:7',
+            'password' => 'required|min:7|same:confirm_password'
+        ]);
+        $admin = Admin::where('email',$request->input('email'))->first();
+        if(!$admin){
+            return redirect('/password/reset')->withInput()->with('info','Invalid Email!');
+        }
+
+        $admin->password = bcrypt($request->input('password'));
+        $admin->save();
+
+        if (Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password')])) {
+            // Authentication passed...
+            return redirect()->route('dashboard');
+        }else{
+            // Authentication failed...
+            //redirect the user with the old input
+            return redirect('/')->withInput()->with('info','Invalid Credentials!');
+        }
+
     }
 }
