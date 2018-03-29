@@ -190,4 +190,21 @@ class DepartmentsController extends Controller
         $department->delete();
         return redirect('/departments')->with('info','Selected Department has been Deleted!');
     }
+
+    /**
+     *  Search For Resource(s)
+     * 
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function search(Request $request){
+        $this->validate($request,[
+            'search' => 'required'
+        ]);
+        $str = $request->input('search');
+        $departments = Department::where( 'dept_name' , 'LIKE' , '%'.$str.'%' )
+            ->orderBy('dept_name','asc')
+            ->paginate(4);
+        return view('sys_mg.departments.index')->with([ 'departments' => $departments ,'search' => true ]);
+    }
 }

@@ -11,7 +11,7 @@
                     <li>
                         <a class="dropdown-trigger" href="#!" data-target="dropdown1">
                             {{ Auth::user()->username }}
-                            <i class="material-icons right">arrow_drop_down</i>
+                            <i class="material-icons right white-text">arrow_drop_down</i>
                         </a>
                     </li>
                 </ul>

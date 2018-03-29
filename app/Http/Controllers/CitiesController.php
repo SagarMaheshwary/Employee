@@ -115,4 +115,21 @@ class CitiesController extends Controller
         $city->delete();
         return redirect('/cities')->with('info','Selected city has been deleted!');
     }
+
+    /**
+     *  Search For Resource(s)
+     * 
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function search(Request $request){
+        $this->validate($request,[
+            'search' => 'required'
+        ]);
+        $str = $request->input('search');
+        $cities = City::where( 'city_name' , 'LIKE' , '%'.$str.'%' )
+            ->orderBy('city_name','asc')
+            ->paginate(4);
+        return view('sys_mg.cities.index')->with([ 'cities' => $cities ,'search' => true ]);
+    }
 }

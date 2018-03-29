@@ -110,4 +110,21 @@ class DivisionsController extends Controller
         $division->delete();
         return redirect('/divisions')->with('info','Selected Division has been deleted!');
     }
+
+    /**
+     *  Search For Resource(s)
+     * 
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function search(Request $request){
+        $this->validate($request,[
+            'search' => 'required'
+        ]);
+        $str = $request->input('search');
+        $divisions = Division::where( 'division_name' , 'LIKE' , '%'.$str.'%' )
+            ->orderBy('division_name','asc')
+            ->paginate(4);
+        return view('sys_mg.divisions.index')->with([ 'divisions' => $divisions ,'search' => true ]);
+    }
 }

@@ -111,4 +111,21 @@ class CountriesController extends Controller
         $country->delete();
         return redirect('/countries')->with('info','Selected Country has been deleted!');
     }
+
+    /**
+     *  Search For Resource(s)
+     * 
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function search(Request $request){
+        $this->validate($request,[
+            'search' => 'required'
+        ]);
+        $str = $request->input('search');
+        $countries = Country::where( 'country_name' , 'LIKE' , '%'.$str.'%' )
+            ->orderBy('country_name','asc')
+            ->paginate(4);
+        return view('sys_mg.countries.index')->with([ 'countries' => $countries ,'search' => true ]);
+    }
 }

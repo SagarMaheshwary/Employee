@@ -5,7 +5,7 @@ It's under Development.
 
 ### Files that have been created in public folder
 
-- added chart.js library for creating charts.
+- None
 
 ### Changes that have been made in public folder
 
@@ -17,7 +17,8 @@ It's under Development.
 
 ### Views that have been modified
 
-- Dashboard.
+- moved employee views from mg_emp/employee to employee.
+- added search 
 
 ### Controllers that have been created
 
@@ -25,7 +26,7 @@ It's under Development.
 
 ### Controllers that have been modified
 
-- DashboardController.
+- All.
 
 ### Models that have been created
 

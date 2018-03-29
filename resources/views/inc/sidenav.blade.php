@@ -60,7 +60,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="waves-effect waves-grey">
+                            <a href="/report" class="waves-effect waves-grey">
                                 <i class="material-icons">insert_drive_file</i>
                                 Report
                             </a>

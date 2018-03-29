@@ -28,49 +28,57 @@ Route::get('/dashboard','DashBoardController@index')->name('dashboard');
  * 
  */
 Route::resource('/departments','DepartmentsController');
+Route::post('/departments/search','DepartmentsController@search')->name('departments.search');
 
 /**
  *  Countries Route(s)
  */
 Route::resource('/countries','CountriesController');
+Route::post('/countries/search','CountriesController@search')->name('countries.search');
 
 /**
  *  Cities Route(s)
  */
 Route::resource('/cities','CitiesController');
-Route::get('/cities/search/{str}','CitiesController@search');
+Route::post('/cities/search','CitiesController@search')->name('cities.search');
 
 /**
  *  Salaries Route(s)
  */
 Route::resource('/salaries','SalariesController');
+Route::post('/salaries/search','SalariesController@search')->name('salaries.search');
 
 /**
  *  Divisions Route(s)
  */
 Route::resource('/divisions','DivisionsController');
+Route::post('/divisions/search','DivisionsController@search')->name('divisions.search');
 
 /**
  *  States Route(s)
  */
 Route::resource('/states','StatesController');
+Route::post('/states/search','StatesController@search')->name('states.search');
 
 /**
  *  States Route(s)
  */
 Route::resource('/employees','EmployeesController');
 
+Route::post('employees/search','EmployeesController@search')->name('employees.search');
+
 /**
  *  Admins Route(s)
  */
 Route::resource('/admins','AdminsController');
+Route::post('/admins','AdminsController@search')->name('admins.search');
 
 /**
  *  Auth Route(s)
  */
 
 //show the login view
-Route::get('/','AuthController@index')->name('login');
+Route::get('/','AuthController@index')->name('login')->middleware('guest');
 
 //Authenticate a user
 Route::post('/','AuthController@authenticate')->name('auth.authenticate');

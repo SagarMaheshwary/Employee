@@ -120,6 +120,25 @@ class AdminsController extends Controller
     }
 
     /**
+     *  Search For Resource(s)
+     * 
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function search(Request $request){
+        $this->validate($request,[
+            'search' => 'required',
+            'options' => 'required',
+        ]);
+        $str = $request->input('search');
+        $option = $request->input('options');
+        $admins = Admin::where( $option , 'LIKE' , '%'.$str.'%' )
+            ->orderBy($option,'asc')
+            ->paginate(4);
+        return view('admin.index')->with([ 'admins' => $admins ,'search' => true ]);
+    }
+
+    /**
      *  Validate all the inputs
      */
     private function validateRequest(Request $request, $id)
@@ -127,9 +146,10 @@ class AdminsController extends Controller
         $this->validate($request,[
             'first_name'   =>  'required|min:3',
             'last_name'    =>  'required|min:3',
+            //if we are updating admin but not changing password.
+            'password'     =>  ''.( $id ? '' : 'required|min:7' ),
             'username'     =>  'required|unique:admins,username,'.($id ? : '' ).'|min:3',
             'email'        =>  'required|email|unique:admins,email,'.($id ? : '' ).'|min:7',
-            'password'     =>  'required|alpha_dash|min:7',
             'picture'      =>  ''.($request->hasFile('picture')  ? 'required|image|max:1999' : '')
         ]);
     }
@@ -142,7 +162,9 @@ class AdminsController extends Controller
         $admin->last_name = $request->input('last_name');
         $admin->username = $request->input('username');
         $admin->email = $request->input('email');
-        $admin->password = bcrypt($request->input('password'));
+        if($request->input('password') != NULL){
+            $admin->password = bcrypt($request->input('password'));
+        }
         if($request->hasFile('picture')){
             $admin->picture = $fileNameToStore;
         }

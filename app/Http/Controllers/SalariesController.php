@@ -110,4 +110,21 @@ class SalariesController extends Controller
         $salary->delete();
         return redirect('/salaries')->with('info','Selected salary has been deleted!');
     }
+
+    /**
+     *  Search For Resource(s)
+     * 
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function search(Request $request){
+        $this->validate($request,[
+            'search' => 'required'
+        ]);
+        $str = $request->input('search');
+        $salaries = Salary::where( 's_amount' , 'LIKE' , '%'.$str.'%' )
+            ->orderBy('s_amount','asc')
+            ->paginate(4);
+        return view('sys_mg.salaries.index')->with([ 'salaries' => $salaries ,'search' => true ]);
+    }
 }

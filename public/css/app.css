@@ -42,6 +42,22 @@ header, main, footer {
     margin-top:15px !important;
 }
 
+.mt-10{
+    margin-top:10px !important;
+}
+
+.mt-5{
+    margin-top:5px;
+}
+
+.mb-0{
+    margin-bottom:0;
+}
+
+.mt-0{
+    margin-top:0;
+}
+
 .mt-20{
     margin-top:20px !important;
 }
@@ -77,6 +93,10 @@ header, main, footer {
 .card-mt-15{
     /* vh is viewport.*/
     margin-top:15vh;
+}
+
+.material-icons{
+    color:#616161;
 }
 
 body {
@@ -131,6 +151,9 @@ main {
 @media only screen and (max-width : 600px) {
     .card-login{
         margin-top: 25%;
+    }
+    h4{
+        font-size:24px;
     }
 }
 

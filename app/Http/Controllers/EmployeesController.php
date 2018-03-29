@@ -12,6 +12,7 @@ use App\Salary;
 use App\Division;
 use App\State;
 use App\Gender;
+use DB;
 
 class EmployeesController extends Controller
 {
@@ -30,7 +31,7 @@ class EmployeesController extends Controller
     public function index()
     {
         $employees = Employee::Paginate(4);
-        return view('emp_mg.employee.index')->with('employees',$employees);
+        return view('employee.index')->with('employees',$employees);
     }
 
     /**
@@ -57,7 +58,7 @@ class EmployeesController extends Controller
         /**
          *  return the view with an array of all these objects
          */
-        return view('emp_mg.employee.create')->with([
+        return view('employee.create')->with([
             'departments'  => $departments,
             'countries'    => $countries,
             'cities'       => $cities,
@@ -122,7 +123,7 @@ class EmployeesController extends Controller
     public function show($id)
     {
         $employee = Employee::find($id);
-        return view('emp_mg.employee.show')->with('employee',$employee);
+        return view('employee.show')->with('employee',$employee);
     }
 
     /**
@@ -146,7 +147,7 @@ class EmployeesController extends Controller
         $genders      = Gender::orderBy('gender_name','asc')->get();
 
         $employee = Employee::find($id);
-        return view('emp_mg.employee.edit')->with([
+        return view('employee.edit')->with([
             'departments'  => $departments,
             'countries'    => $countries,
             'cities'       => $cities,
@@ -200,6 +201,23 @@ class EmployeesController extends Controller
         $employee->delete();
         Storage::delete('public/employee_images/'.$employee->picture);
         return redirect('/employees')->with('info','Selected Employee has been deleted!');
+    }
+
+    /**
+     *  Search For Resource(s)
+     * 
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function search(Request $request){
+        $this->validate($request,[
+            'search'   => 'required|min:1',
+            'options'  => 'required'
+        ]);
+        $str = $request->input('search');
+        $option = $request->input('options');
+        $employees = Employee::where($option, 'LIKE' , '%'.$str.'%')->Paginate(4);
+        return view('employee.index')->with(['employees' => $employees , 'search' => true ]);
     }
 
     /**

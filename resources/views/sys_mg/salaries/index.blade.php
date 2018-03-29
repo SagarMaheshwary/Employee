@@ -2,6 +2,11 @@
 @section('content')
 <div class="container">
     <h4 class="grey-text text-darken-2 center">Salary Management</h4>
+    
+    {{-- Include the searh component with with title and route --}}
+    @component('sys_mg.inc.search',['title' => 'Salaries' , 'route' => 'salaries.search' , 'type' => 'number'])
+    @endcomponent
+
     <div class="row">
         <!-- Show All Departments List as a Card -->
         <div class="card col s12 m12 l12 xl12">
@@ -29,7 +34,7 @@
                                         <td>{{$salary->created_at}}</td>
                                         <td>{{$salary->updated_at}}</td>
                                         <td>
-                                            <div class="row">
+                                            <div class="row mb-0">
                                               <div class="col">
                                                     <a href="{{route('salaries.edit',$salary->id)}}" class="btn btn-floating btn-small waves=effect waves-light orange"><i class="material-icons">mode_edit</i></a>
                                                 </div>
@@ -47,7 +52,14 @@
                             @else
                                 <!-- if there are no salaries then show this message -->
                                 <tr>
-                                    <td colspan="5"><h6 class="grey-text text-darken-2 center">No Salaries have been created yet!</h6></td>
+                                    <td colspan="5"><h6 class="grey-text text-darken-2 center">No Salaries found yet!</h6></td>
+                                </tr>
+                            @endif
+                            @if(isset($search))
+                                <tr>
+                                    <td colspan="3">
+                                        <a href="/salaries" class="right">Show All</a>
+                                    </td>
                                 </tr>
                             @endif
                         </tbody>
