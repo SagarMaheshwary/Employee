@@ -1,57 +1,50 @@
 ## Employee Management System
-This Project is using Materialize-css version 1.0.0 alpha-4 , material icons. It's backend is built on laravel which is an awesome php framework and it's gonna generate views from blade template engine (just plain old html and css).
+This Project is using Laravel, Materialize-css version 1.0.0 alpha-4 , material icons.
 
-It's under Development.
+### Running this web application
 
-### Files that have been created in public folder
+- make sure you already have xampp or wamp installed if you are on windows machine, mamp for mac , and lamp for linux.
 
-- None
+- clone this repository to your local machine or just download the zip.
 
-### Changes that have been made in public folder
+- install [Composer](https://getcomposer.org/download) first, then run this command in your command-line (you should be inside your project directory). 
+```bash
+  composer install
+```
 
-- some css.
+- rename .env.example to .env and configure your database.
 
-### Views that have been created
+- create tables by migrations.
 
-- None.
+```bash
+    php artisan migrate
+```
 
-### Views that have been modified
+- run seeders to create a default admin and genders.
 
-- index,report in reports.
+```bash
+    php artisan db:seed
+```
+- generate application key.
 
-### Controllers that have been created
+```bash
+    php artisan key:generate
+```
 
-- ReportsController
+- clear config.
 
-### Controllers that have been modified
+```bash
+    php artisan config:clear
+```
 
-- None.
+- serve the application.
 
-### Models that have been created
+```bash
+    php artisan serve
+```
 
-- None.
+- ScreenShot
 
-### Models that have been modified
+![screen shot](/screenshot/ems.png)
 
-- None.
-
-### Migrations that have been created
-
-- None.
-
-### Migrations that have been modified
-
-- None.
-
-### Routes that have been created
-
-- Reports
-
-### Routes that have been modified
-
-- None.
-
-### Note
-
-- check out the code for comments.
-- above headings that says changes have been made means changes to files that were created in previous commit.
+Thankyou.
