@@ -1,5 +1,5 @@
 ## Employee Management System
-This Project is using Laravel, Materialize-css version 1.0.0 alpha-4 , material icons.
+This Application is using Laravel, Materialize-css version 1.0.0 alpha-4 , material icons.
 
 ### Running this web application
 
@@ -20,7 +20,7 @@ This Project is using Laravel, Materialize-css version 1.0.0 alpha-4 , material 
     php artisan migrate
 ```
 
-- run seeders to create a default admin and genders.
+- create a default admin and genders.
 
 ```bash
     php artisan db:seed
@@ -45,6 +45,6 @@ This Project is using Laravel, Materialize-css version 1.0.0 alpha-4 , material 
 
 - ScreenShot
 
-![screen shot](/screenshot/ems.png)
+![screen shot](https://github.com/SagarMaheshwary/Employee/blob/master/screenshot/ems.PNG)
 
 Thankyou.
