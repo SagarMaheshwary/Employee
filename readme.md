@@ -37,6 +37,12 @@ This Application is using Laravel, Materialize-css version 1.0.0 alpha-4 , mater
     php artisan config:clear
 ```
 
+- Link the storage folder for images.
+
+```bash
+    php artisan storage:link
+```
+
 - serve the application.
 
 ```bash
