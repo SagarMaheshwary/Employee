@@ -5,7 +5,7 @@
                 <a href="{{route('dashboard')}}" class="brand-logo hide-on-small-only">Employee</a>
                 <a href="{{route('dashboard')}}" class="brand-logo show-on-small-only hide-on-med-and-up">EMS</a>
                 <ul>
-                    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons white-text">menu</i></a>
                 </ul>
                 <ul class="right">
                     <li>

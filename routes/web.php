@@ -94,3 +94,13 @@ Route::get('/password/reset', 'AuthController@showpasswordresetform')->name('aut
 
 //Reset Password
 Route::post('/password/reset', 'AuthController@reset');
+
+/**
+ *  Reports Route(s)
+ */
+
+//Show Reports View
+Route::get('/reports','ReportsController@index')->name('reports.index');
+
+//Generate PDF
+Route::post('/reports/pdf','ReportsController@makeReport')->name('reports.make');

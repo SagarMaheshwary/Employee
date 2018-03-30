@@ -17,16 +17,15 @@ It's under Development.
 
 ### Views that have been modified
 
-- moved employee views from mg_emp/employee to employee.
-- added search 
+- index,report in reports.
 
 ### Controllers that have been created
 
-- None.
+- ReportsController
 
 ### Controllers that have been modified
 
-- All.
+- None.
 
 ### Models that have been created
 
@@ -46,7 +45,7 @@ It's under Development.
 
 ### Routes that have been created
 
-- None.
+- Reports
 
 ### Routes that have been modified
 
