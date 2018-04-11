@@ -51,9 +51,10 @@ class AdminsController extends Controller
      */
     public function store(Request $request)
     {
+        $admin = new Admin();
         $this->validateRequest($request,NULL);
         $fileNameToStore = $this->handleImageUpload($request);
-        $this->setAdmin($request,$fileNameToStore);
+        $this->setAdmin($request ,$admin, $fileNameToStore);
         return redirect('/admins')->with('info','New Admin has been created!');
     }
 

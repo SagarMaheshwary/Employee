@@ -72,6 +72,7 @@ Route::post('employees/search','EmployeesController@search')->name('employees.se
  */
 Route::resource('/admins','AdminsController');
 Route::post('/admins','AdminsController@search')->name('admins.search');
+Route::post('/admins/create','AdminsController@store')->name('admins.store');
 
 /**
  *  Auth Route(s)
