@@ -49,7 +49,11 @@ This Application is using Laravel, Materialize-css version 1.0.0 alpha-4 , mater
     php artisan serve
 ```
 
-- ScreenShot
+#### Admin Credentials
+- Email :- admin@admin.com
+- Password :- Password
+
+#### ScreenShot
 
 ![screen shot](https://github.com/SagarMaheshwary/Employee/blob/master/screenshot/ems.PNG)
 
