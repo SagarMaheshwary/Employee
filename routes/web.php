@@ -90,11 +90,10 @@ Route::get('/logout','AuthController@logout')->name('auth.logout')->middleware('
 //show user details
 Route::get('/admin','AuthController@show')->name('auth.show')->middleware('auth');
 
-//Show Password Reset Form
-Route::get('/password/reset', 'AuthController@showpasswordresetform')->name('auth.reset');
-
-//Reset Password
-Route::post('/password/reset', 'AuthController@reset');
+Route::get('/password/reset','ResetPassword\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+Route::post('/password/email','ResetPassword\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+Route::get('/password/reset/{token}','ResetPassword\ResetPasswordController@showResetForm')->name('password.reset');
+Route::post('/password/reset','ResetPassword\ResetPasswordController@reset');
 
 /**
  *  Reports Route(s)

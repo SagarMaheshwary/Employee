@@ -27,7 +27,7 @@
                             <span>Remember Me</span>
                         </label>
                     </p>
-                    <a href="{{route('auth.reset')}}" class="right">Forgot Password</a>
+                    <a href="{{route('password.request')}}" class="right">Forgot Password</a>
                     <br>
                     <div class="card-action">
                         <button class="btn col s12 m12 l12 xl12 waves-effect waves-light gradient-bg" type="submit" name="submit">Login</button>
