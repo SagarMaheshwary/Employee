@@ -12,9 +12,15 @@ This Application is using Laravel, Materialize-css version 1.0.0 alpha-4 , mater
   composer install
 ```
 
-- rename .env.example to .env and configure your database.
+- rename .env.example to .env and add your database and mail driver credentials.
 
-- create tables by migrations.
+- generate application key.
+
+```bash
+    php artisan key:generate
+```
+
+- create database tables.
 
 ```bash
     php artisan migrate
@@ -25,13 +31,8 @@ This Application is using Laravel, Materialize-css version 1.0.0 alpha-4 , mater
 ```bash
     php artisan db:seed
 ```
-- generate application key.
 
-```bash
-    php artisan key:generate
-```
-
-- clear config.
+- clear config (only if you make changes to .env file and restart the server if you are using laravel dev server).
 
 ```bash
     php artisan config:clear
@@ -43,11 +44,12 @@ This Application is using Laravel, Materialize-css version 1.0.0 alpha-4 , mater
     php artisan storage:link
 ```
 
-- serve the application.
+- Start the development server.
 
 ```bash
     php artisan serve
 ```
+> In Laravel, all the requests are directed to index.php in public directory so, please use a Virtual Host instead of opening it from http://localhost/your-laravel-project/public (It doesn't work that way).
 
 #### Admin Credentials
 - Email :- admin@admin.com
@@ -57,4 +59,4 @@ This Application is using Laravel, Materialize-css version 1.0.0 alpha-4 , mater
 
 ![screen shot](https://github.com/SagarMaheshwary/Employee/blob/master/screenshot/ems.PNG)
 
-Thankyou.
+Please star the project if you like it. Thank you!
