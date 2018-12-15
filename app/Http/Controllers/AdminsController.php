@@ -148,7 +148,7 @@ class AdminsController extends Controller
             'first_name'   =>  'required|min:3',
             'last_name'    =>  'required|min:3',
             //if we are updating admin but not changing password.
-            'password'     =>  ''.( $id ? '' : 'required|min:7' ),
+            'password'     =>  ''.( $id ? 'nullable|min:7' : 'required|min:7' ),
             'username'     =>  'required|unique:admins,username,'.($id ? : '' ).'|min:3',
             'email'        =>  'required|email|unique:admins,email,'.($id ? : '' ).'|min:7',
             'picture'      =>  ''.($request->hasFile('picture')  ? 'required|image|max:1999' : '')

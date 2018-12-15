@@ -116,7 +116,7 @@
     </div>
     <br>
     {{-- include the chart.js Library --}}
-    <script src="{{asset('js/chart.js')}}"></script>
+    <script src="{{asset('js/Chart.js')}}"></script>
     
     {{-- Create the chart with javascript using canvas --}}
     <script>

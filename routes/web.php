@@ -21,7 +21,7 @@
  * Dashboard Route(s)
  * 
  */
-Route::get('/dashboard','DashBoardController@index')->name('dashboard');
+Route::get('/dashboard','DashboardController@index')->name('dashboard');
 
 /**
  *  Departments Route(s)
