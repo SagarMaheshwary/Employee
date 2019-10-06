@@ -31,7 +31,7 @@
                         </li>
                         <li>
                             <a href="/salaries" class="waves-effect waves-grey">
-                                <i class="material-icons">attach_money</i>
+                                <i style="font-size:23px;">₹</i>
                                 Salary
                             </a>
                         </li>

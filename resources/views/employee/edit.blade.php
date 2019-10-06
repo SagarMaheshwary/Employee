@@ -60,7 +60,7 @@
                                 <label>Gender</label>
                             </div>
                             <div class="input-field col s12 m6 l6 xl4">
-                                <i class="material-icons prefix">attach_money</i>
+                                <i style="font-size:20px;">₹</i>
                                 <select name="salary">
                                     <option value="" disabled>Choose a Salary</option>
                                     @foreach($salaries as $salary)
@@ -125,7 +125,7 @@
                             <div class="input-field col s12 m12 l12 xl8 offset-xl2">
                                 <i class="material-icons prefix">business</i>
                                 <select name="division">
-                                    <option value="" disabled >Choose a Division</option>
+                                    <option value="" disabled >Choose a Designation</option>
                                     @foreach($divisions as $division)
                                         <option value="{{$division->id}}" {{ old('division') ? 'selected' : '' }} {{ $employee->empDivision==$division ? 'selected' : '' }} >{{$division->division_name}}</option>
                                     @endforeach
