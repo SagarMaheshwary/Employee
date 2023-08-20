@@ -1,7 +1,7 @@
 ## Employee Management System
 This Application is using Laravel, Materialize-css version 1.0.0 alpha-4 , material icons.
 
-NOTE: checkout my [blog-api](https://github.com/SagarMaheshwary/learning/tree/master/laravel-blog-api) that I recently created using latest laravel features.
+NOTE: checkout my [blog-api](https://github.com/SagarMaheshwary/learning) that I recently created using latest laravel features.
 
 ### Running this web application
 
